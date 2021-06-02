@@ -1,0 +1,5 @@
+<div class="row">
+    <div class="col-6 col-lg-4 col-xl-3 my-3" *ngFor="let userCard of userCards | async">
+        <app-card [user]="userCard"></app-card>
+    </div>
+</div>
