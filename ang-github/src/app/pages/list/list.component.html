@@ -1,0 +1,20 @@
+<button class="btn btn-primary" (click)="onBack()">Back</button>
+<h4>Repositories list</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th (click)="onColumnSelect('name')">Repositories</th>
+            <th (click)="onColumnSelect('fork')">Fork</th>
+            <th (click)="onColumnSelect('stargazers_count')">Stars</th>
+            <th (click)="onColumnSelect('updated_at')">Last update</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of contributors$ | async | sorter:columnKey:direction">
+            <td>{{c.name}}</td>
+            <td>{{c.fork}}</td>
+            <td>{{c.stargazers_count}}</td>
+            <td>{{c.updated_at}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,16 +1,16 @@
 <div class="card" style="width: 18rem;">
     <div class="card-top d-flex px-3 pt-3">
-        <img class="card-img" [src]="user.avatar_url" [alt]="user.avatar_url">
+        <img class="card-img" [src]="[avatar_url]" [alt]="[login]">
         <div class="text-muted px-2 align-self-end">
             @github
         </div>
-        <div class="justify-content-right">
+        <div class="cross">
             <i class="fa fa-crosshairs"></i>
         </div>
     </div>
     <div class="card-body">
-        <h5 class="card-title font-weight-bold">{{user.login}}</h5>
-        <p class="card-text text-muted">{{user.contributions}} commits</p>
+        <h5 class="card-title font-weight-bold">{{login}}</h5>
+        <p class="card-text text-muted">{{contributions}} commits</p>
     </div>
-    <a href="#" class="btn btn-outline-primary mx-auto mb-3">VIEW REPOSITORIES</a>
+    <a [routerLink]="[login]" class="btn btn-outline-primary mx-auto mb-3">VIEW REPOSITORIES</a>
 </div>

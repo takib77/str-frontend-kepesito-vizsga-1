@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { User } from 'src/app/model/user';
 
 @Component({
   selector: 'app-card',
@@ -8,7 +7,9 @@ import { User } from 'src/app/model/user';
 })
 export class CardComponent implements OnInit {
 
-  @Input() user = new User();
+  @Input() avatar_url: string = '';
+  @Input() login: string = '';
+  @Input() contributions: number = 0;
 
   constructor() { }
 

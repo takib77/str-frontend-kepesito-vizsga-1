@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CardComponent } from './common/card/card.component';
+import { ListComponent } from './pages/list/list.component';
+import { SorterPipe } from './pipe/sorter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    HomeComponent
+    HomeComponent,
+    ListComponent,
+    SorterPipe
   ],
   imports: [
     BrowserModule,
